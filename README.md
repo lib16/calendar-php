@@ -12,7 +12,7 @@ composer require lib16/calendar
 ## The `Calendar` class
 
 ```php
-&lt;?php
+<?php
 require_once 'vendor/autoload.php';
 
 use Lib16\Calendar\Calendar;
@@ -21,98 +21,98 @@ use Lib16\Calendar\DateTime;
 setlocale(LC_TIME, 'de');
 $easter = DateTime::easter(2016);
 $calendar = Calendar::month(5, 2016)
-        -&gt;setMonthFormat('%b %Y')
-        -&gt;setFirstWeekday('DE')
-        -&gt;addEntry('2016-05-01', 'Tag der Arbeit')
-        -&gt;addEntry($easter-&gt;copy()-&gt;addDays(39), 'Christi Himmelfahrt')
-        -&gt;addEntry($easter-&gt;copy()-&gt;addDays(50), 'Pfingstmontag')
-        -&gt;addEntry($easter-&gt;copy()-&gt;addDays(60), 'Fronleichnam');
-print json_encode($calendar-&gt;buildArray(), JSON_PRETTY_PRINT);
+        ->setMonthFormat('%b %Y')
+        ->setFirstWeekday('DE')
+        ->addEntry('2016-05-01', 'Tag der Arbeit')
+        ->addEntry($easter->copy()->addDays(39), 'Christi Himmelfahrt')
+        ->addEntry($easter->copy()->addDays(50), 'Pfingstmontag')
+        ->addEntry($easter->copy()->addDays(60), 'Fronleichnam');
+print json_encode($calendar->buildArray(), JSON_PRETTY_PRINT);
 ```
 
 The generated output:
 
 ```json
 {
-    &quot;weekdays&quot;: {
-        &quot;mon&quot;: &quot;Mo&quot;,
-        &quot;tue&quot;: &quot;Di&quot;,
-        &quot;wed&quot;: &quot;Mi&quot;,
-        &quot;thu&quot;: &quot;Do&quot;,
-        &quot;fri&quot;: &quot;Fr&quot;,
-        &quot;sat&quot;: &quot;Sa&quot;,
-        &quot;sun&quot;: &quot;So&quot;
+    "weekdays": {
+        "mon": "Mo",
+        "tue": "Di",
+        "wed": "Mi",
+        "thu": "Do",
+        "fri": "Fr",
+        "sat": "Sa",
+        "sun": "So"
     },
-    &quot;years&quot;: [
+    "years": [
         {
-            &quot;time&quot;: &quot;2016&quot;,
-            &quot;label&quot;: &quot;2016&quot;,
-            &quot;months&quot;: [
+            "time": "2016",
+            "label": "2016",
+            "months": [
                 {
-                    &quot;time&quot;: &quot;2016-05&quot;,
-                    &quot;label&quot;: &quot;Mai 2016&quot;,
-                    &quot;month&quot;: &quot;05&quot;,
-                    &quot;weeks&quot;: [
+                    "time": "2016-05",
+                    "label": "Mai 2016",
+                    "month": "05",
+                    "weeks": [
                         {
-                            &quot;time&quot;: &quot;2016-W17&quot;,
-                            &quot;label&quot;: &quot;17&quot;,
-                            &quot;leading&quot;: 6,
-                            &quot;days&quot;: [
+                            "time": "2016-W17",
+                            "label": "17",
+                            "leading": 6,
+                            "days": [
                                 {
-                                    &quot;time&quot;: &quot;2016-05-01&quot;,
-                                    &quot;label&quot;: &quot;1&quot;,
-                                    &quot;weekday&quot;: &quot;sun&quot;,
-                                    &quot;entries&quot;: [
+                                    "time": "2016-05-01",
+                                    "label": "1",
+                                    "weekday": "sun",
+                                    "entries": [
                                         {
-                                            &quot;class&quot;: &quot;holiday&quot;,
-                                            &quot;title&quot;: &quot;Tag der Arbeit&quot;
+                                            "class": "holiday",
+                                            "title": "Tag der Arbeit"
                                         }
                                     ]
                                 }
                             ]
                         },
                         {
-                            &quot;time&quot;: &quot;2016-W18&quot;,
-                            &quot;label&quot;: &quot;18&quot;,
-                            &quot;days&quot;: [
+                            "time": "2016-W18",
+                            "label": "18",
+                            "days": [
                                 {
-                                    &quot;time&quot;: &quot;2016-05-02&quot;,
-                                    &quot;label&quot;: &quot;2&quot;,
-                                    &quot;weekday&quot;: &quot;mon&quot;
+                                    "time": "2016-05-02",
+                                    "label": "2",
+                                    "weekday": "mon"
                                 },
                                 {
-                                    &quot;time&quot;: &quot;2016-05-03&quot;,
-                                    &quot;label&quot;: &quot;3&quot;,
-                                    &quot;weekday&quot;: &quot;tue&quot;
+                                    "time": "2016-05-03",
+                                    "label": "3",
+                                    "weekday": "tue"
                                 },
                                 {
-                                    &quot;time&quot;: &quot;2016-05-04&quot;,
-                                    &quot;label&quot;: &quot;4&quot;,
-                                    &quot;weekday&quot;: &quot;wed&quot;
+                                    "time": "2016-05-04",
+                                    "label": "4",
+                                    "weekday": "wed"
                                 },
                                 {
-                                    &quot;time&quot;: &quot;2016-05-05&quot;,
-                                    &quot;label&quot;: &quot;5&quot;,
-                                    &quot;weekday&quot;: &quot;thu&quot;,
-                                    &quot;entries&quot;: [
+                                    "time": "2016-05-05",
+                                    "label": "5",
+                                    "weekday": "thu",
+                                    "entries": [
                                         {
-                                            &quot;class&quot;: &quot;holiday&quot;,
-                                            &quot;title&quot;: &quot;Christi Himmelfahrt&quot;
+                                            "class": "holiday",
+                                            "title": "Christi Himmelfahrt"
                                         }
                                     ]
                                 },
                                 {
-                                    &quot;time&quot;: &quot;2016-05-06&quot;,
-                                    &quot;label&quot;: &quot;6&quot;,
-                                    &quot;weekday&quot;: &quot;fri&quot;
+                                    "time": "2016-05-06",
+                                    "label": "6",
+                                    "weekday": "fri"
                                 },
                                 {
-                                    &quot;time&quot;: &quot;2016-05-07&quot;,
-                                    &quot;label&quot;: &quot;7&quot;,
-                                    &quot;weekday&quot;: &quot;sat&quot;
+                                    "time": "2016-05-07",
+                                    "label": "7",
+                                    "weekday": "sat"
                                 },
                                 {
-                                    &quot;time&quot;: &quot;2016-05-08&quot;,
+                                    "time": "2016-05-08",
 
 …
 
@@ -127,12 +127,12 @@ with the same name.
 Assuming that current date is
 <var><time>Thu, 23 Feb 2017 20:59:49 +0100</time></var>:
 ```php
-&lt;?php
+<?php
 require_once 'vendor/autoload.php';
 
 use Lib16\Calendar\DateTime;
 
-const LN = &quot;\n&quot;;
+const LN = "\n";
 
 print      new DateTime();
 print LN . new DateTime('2017-02-22');
@@ -152,12 +152,12 @@ Wed, 01 Mar 2017 20:59:49 +0100
 ### The `create` method
 
 ```php
-&lt;?php
+<?php
 require_once 'vendor/autoload.php';
 
 use Lib16\Calendar\DateTime;
 
-const LN = &quot;\n&quot;;
+const LN = "\n";
 
 print      DateTime::create();
 print LN . DateTime::create(new DateTime());
@@ -207,7 +207,7 @@ Thu, 23 Feb 2017 00:00:00 +0100
 ### The `easter` method
 
 ```php
-&lt;?php
+<?php
 require_once 'vendor/autoload.php';
 
 use Lib16\Calendar\DateTime;
@@ -224,20 +224,20 @@ Sun, 16 Apr 2017 00:00:00 +0200
 
 ### Modify Dates
 ```php
-&lt;?php
+<?php
 require_once 'vendor/autoload.php';
 
 use Lib16\Calendar\DateTime;
 
-const LN = &quot;\n&quot;;
+const LN = "\n";
 
-print LN . DateTime::create('2016-03-29')-&gt;addYears(2);
-print LN . DateTime::create('2016-03-29')-&gt;addMonths(-2);
-print LN . DateTime::create('2016-03-29')-&gt;addDays(3);
-print LN . DateTime::create('2016-04-01')-&gt;forceWorkday();
-print LN . DateTime::create('2016-04-02')-&gt;forceWorkday();
-print LN . DateTime::create('2016-04-03')-&gt;forceWorkday();
-print LN . DateTime::create('2016-04-04')-&gt;forceWorkday();
+print LN . DateTime::create('2016-03-29')->addYears(2);
+print LN . DateTime::create('2016-03-29')->addMonths(-2);
+print LN . DateTime::create('2016-03-29')->addDays(3);
+print LN . DateTime::create('2016-04-01')->forceWorkday();
+print LN . DateTime::create('2016-04-02')->forceWorkday();
+print LN . DateTime::create('2016-04-03')->forceWorkday();
+print LN . DateTime::create('2016-04-04')->forceWorkday();
 
 ```
 
@@ -257,13 +257,13 @@ Mon, 04 Apr 2016 00:00:00 +0200
 
 ### Clone with the `copy` method
 ```php
-&lt;?php
+<?php
 require_once 'vendor/autoload.php';
 
 use Lib16\Calendar\DateTime;
 
 $easter = DateTime::easter(2016);
-$pentecost = $easter-&gt;copy()-&gt;addDays(49);
+$pentecost = $easter->copy()->addDays(49);
 
 print $pentecost;
 
@@ -281,7 +281,7 @@ This method returns a string representation according to locale settings.
 http://php.net/manual/en/function.strftime.php lists the specifiers you can use
 in the format string.
 ```php
-&lt;?php
+<?php
 require_once 'vendor/autoload.php';
 
 use Lib16\Calendar\DateTime;
@@ -289,7 +289,7 @@ use Lib16\Calendar\DateTime;
 setlocale(LC_TIME, 'de');
 
 $date = DateTime::create('2016-06-05');
-print $date-&gt;formatLocalized('%A, %#d. %B %Y');
+print $date->formatLocalized('%A, %#d. %B %Y');
 
 ```
 
