@@ -4,6 +4,7 @@
 
 This package is available on [packagist](https://packagist.org/packages/lib16/calendar),
 so you can use [Composer](https://getcomposer.org) to install it:
+
 ```
 composer require lib16/calendar
 ```
@@ -21,12 +22,12 @@ use Lib16\Calendar\DateTime;
 setlocale(LC_TIME, 'de');
 $easter = DateTime::easter(2016);
 $calendar = Calendar::month(5, 2016)
-        ->setMonthFormat('%b %Y')
-        ->setFirstWeekday('DE')
-        ->addEntry('2016-05-01', 'Tag der Arbeit')
-        ->addEntry($easter->copy()->addDays(39), 'Christi Himmelfahrt')
-        ->addEntry($easter->copy()->addDays(50), 'Pfingstmontag')
-        ->addEntry($easter->copy()->addDays(60), 'Fronleichnam');
+    ->setMonthFormat('%b %Y')
+    ->setFirstWeekday('DE')
+    ->addEntry('2016-05-01', 'Tag der Arbeit')
+    ->addEntry($easter->copy()->addDays(39), 'Christi Himmelfahrt')
+    ->addEntry($easter->copy()->addDays(50), 'Pfingstmontag')
+    ->addEntry($easter->copy()->addDays(60), 'Fronleichnam');
 print json_encode($calendar->buildArray(), JSON_PRETTY_PRINT);
 ```
 
@@ -126,6 +127,7 @@ with the same name.
 
 Assuming that current date is
 <var><time>Thu, 23 Feb 2017 20:59:49 +0100</time></var>:
+
 ```php
 <?php
 require_once 'vendor/autoload.php';
@@ -223,6 +225,7 @@ Sun, 16 Apr 2017 00:00:00 +0200
 
 
 ### Modify Dates
+
 ```php
 <?php
 require_once 'vendor/autoload.php';
@@ -256,6 +259,7 @@ Mon, 04 Apr 2016 00:00:00 +0200
 
 
 ### Clone with the `copy` method
+
 ```php
 <?php
 require_once 'vendor/autoload.php';
@@ -280,6 +284,7 @@ Sun, 15 May 2016 00:00:00 +0200
 This method returns a string representation according to locale settings.
 http://php.net/manual/en/function.strftime.php lists the specifiers you can use
 in the format string.
+
 ```php
 <?php
 require_once 'vendor/autoload.php';

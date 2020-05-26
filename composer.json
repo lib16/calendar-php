@@ -1,19 +1,27 @@
 {
-	"name": "lib16/calendar",
-	"description": "A basic PHP 7 class to create calendar data.",
-	"keywords": ["calendar", "date", "time", "datetime"],
-	"homepage" : "https://github.com/lib16/graphics-php",
-	"license": "MIT",
-	"require": {
-		"php": ">=7.0"
+	"name" : "lib16/calendar",
+	"description" : "A basic PHP 7 class to create calendar data.",
+	"keywords" : [
+		"calendar",
+		"date",
+		"time",
+		"datetime"
+	],
+	"homepage" : "https://github.com/lib16/calendar-php",
+	"license" : "MIT",
+	"require" : {
+		"php" : ">=7.0"
 	},
-	"autoload": {
-		"psr-4": {
-			"Lib16\\Calendar\\": "src/"
+	"require-dev" : {
+		"phpunit/phpunit" : "^6"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Lib16\\Calendar\\" : "src/"
 		}
 	},
 	"autoload-dev" : {
-		"psr-4": {
+		"psr-4" : {
 			"Lib16\\Calendar\\Tests\\" : "tests/"
 		}
 	}
