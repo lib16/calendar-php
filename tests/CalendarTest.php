@@ -139,6 +139,7 @@ class CalendarTest extends TestCase
     public function testBuildArray()
     {
         $actual = Calendar::span('2015-12-29', '2016-02-01')
+            ->setDayFormat(PHP_OS == 'Linux' ? '%-d' : '%#d')
             ->addEntry('2016-01-30', 'International PHP Day')
             ->buildArray();
         $expected = [
