@@ -143,7 +143,7 @@ class DateTimeTest extends TestCase
             ['%a', 'Tue'],
             ['%A', 'Tuesday'],
             ['%d', '01'],
-            ['%#d', '1'],
+//            ['%#d', '1'], // nur Windows
             ['%b', 'Mar'],
             ['%B', 'March'],
             ['%m', '03'],
