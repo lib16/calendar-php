@@ -409,6 +409,6 @@ class CalendarTest extends TestCase
                 ]
             ]
         ];
-        $this->assertSame($expected, $actual);
+        $this->assertSame(serialize($expected), serialize($actual));
     }
 }
