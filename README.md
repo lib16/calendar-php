@@ -1,6 +1,6 @@
 # `lib16/calendar-php`
 
-[![Build Status](https://travis-ci.org/lib16/calendar-php.svg?branch=master)](https://travis-ci.org/lib16/calendar-php)
+[![Build Status](https://travis-ci.com/lib16/calendar-php.svg?branch=master)](https://travis-ci.com/lib16/calendar-php)
 
 ## Installation with Composer
 
